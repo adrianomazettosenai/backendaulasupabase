@@ -15,3 +15,11 @@ CREATE TABLE produtos (
   "categoriaId" BIGINT REFERENCES categorias(id),
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+INSERT INTO categorias (nome) 
+VALUES ('Combinados'), ('Temakis'), ('Bebidas');
+
+INSERT INTO produtos (nome, descricao, preco, imagem, "categoriaId") 
+VALUES 
+('Combinado Salmão 20 Peças', 'Sashimis, niguiris e uramakis de salmão fresco.', 89.90, 'combinado1.png', 1),
+('Temaki Filadélfia', 'Salmão, cream cheese e cebolinha.', 35.00, 'temaki-fila.png', 2);
