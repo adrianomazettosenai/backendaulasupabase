@@ -7,7 +7,7 @@ router.get('/', async (req, res, next) => {
         const { data, error } = await supabase
         .from('categorias')
         .select('*')
-        .ordem('id', {ascending: true});
+        .order('id', {ascending: true});
 
         if (error){
         throw error;
@@ -17,7 +17,6 @@ router.get('/', async (req, res, next) => {
         next(err);
     }
 });
-
 
 router.post('/', async (req, res, next) => {
     try{

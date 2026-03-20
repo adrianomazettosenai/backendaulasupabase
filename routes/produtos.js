@@ -6,13 +6,6 @@ router.get('/erro-teste', (req, res) => {
     throw new Error("O servidor do Haruy Sushi tropeçou!");
 });
 
-
-
-
-
-
-
-
 router.get('/', async (req, res, next) => {
     try{
         const {categoriaId} = req.query;
@@ -29,14 +22,6 @@ router.get('/', async (req, res, next) => {
         next(err);
     }
 });
-
-
-
-
-
-
-
-
 
 router.get('/:id', async (req, res, next) => {
     try{
@@ -57,15 +42,6 @@ router.get('/:id', async (req, res, next) => {
         next(err);
     }
 });
-
-
-
-
-
-
-
-
-
 
 router.post('/', async (req, res, next) => {
     try {
@@ -96,7 +72,7 @@ router.put('/:id', async (req, res, next) => {
         const {id} = req.params;
         const {data, error} = await supabase
             .from('produtos')
-            .uptade(req.body)
+            .update(req.body)
             .eq('id', id)
             .select();
 
