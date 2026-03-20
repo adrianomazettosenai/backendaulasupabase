@@ -57,16 +57,6 @@ router.post('/', async (req, res, next) => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
 router.put('/:id', async (req, res, next) => {
    try{
         const {id} = req.params;
@@ -86,17 +76,6 @@ router.put('/:id', async (req, res, next) => {
     next(err);
    }
 });
-
-
-
-
-
-
-
-
-
-
-
 
 router.delete('/:id', async (req, res, next) => {
     try {
