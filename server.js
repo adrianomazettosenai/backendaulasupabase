@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(logger);
 app.get('/', (req, res) => {
-    res.json({ mensagem: '🍣 Bem-vindo à API do Haruy Sushi! (Aula 6)' });
+    res.json({ mensagem: '🍣 Bem-vindo à API do Haruy Sushi! (Aula 8)' });
 });
 
 const rotasCategorias = require('./routes/categorias');
